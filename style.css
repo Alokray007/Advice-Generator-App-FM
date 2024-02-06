@@ -1,0 +1,138 @@
+/* ------- CSS Reset ----------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+s img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-primary-lc: hsl(193, 38%, 86%);
+  --clr-primary-ng: hsl(150, 100%, 66%);
+  --clr-neutral-gb: hsl(217, 19%, 38%);
+  --clr-neutral-dgb: hsl(217, 19%, 24%);
+  --clr-neutral-db: hsl(218, 23%, 16%);
+
+  --font-para: 0.8rem;
+  --font-quote: 28px;
+
+  --fw-bold: 800;
+
+  --ff: "Manrope", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 4rem;
+  color: var(--clr-primary-lc);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-neutral-db);
+  font-family: var(--ff);
+}
+
+.main {
+  background-color: var(--clr-neutral-dgb);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1.2rem;
+  max-width: 350px;
+}
+
+#advid {
+  color: var(--clr-primary-ng);
+  text-transform: uppercase;
+  margin: 15px 0;
+  letter-spacing: 5px;
+  font-size: var(--font-para);
+}
+
+.main p {
+  font-size: var(--font-quote);
+  margin: 15px 0;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-lc);
+}
+
+.img {
+  margin-top: 40px;
+}
+
+.img img {
+  filter: grayscale(50%) brightness(150%);
+}
+
+.img source {
+  filter: grayscale(50%) brightness(150%);
+}
+
+.button {
+  border-radius: 50%;
+  padding: 20px;
+  background-color: var(--clr-primary-ng);
+  position: relative;
+  top: 30px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn {
+  position: relative;
+  top: 5px;
+}
+
+.button:hover {
+  box-shadow: 0 0 20px 1px var(--clr-primary-ng);
+}
+
+@media only screen and (min-width:769px)  {
+  .main {
+    min-width: 550px;
+    padding: 2.2rem;
+  }
+
+  .button {
+    position: relative;
+    top: 35px;
+  }
+}
